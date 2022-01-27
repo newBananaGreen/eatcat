@@ -441,9 +441,9 @@ function showGameScoreLayer() {
     let score_text = '您坚持了 ';
     score_text += "<span style='color:red;'>" + (deviation_time / 1000).toFixed(2) + "</span>" + ' 秒哦！<br>您的得分为 ';
     score_text += "<span style='color:red;'>" + _gameScore + "</span>";
-    score_text += '<br>您平均每秒点击了 ';
+    score_text += '<br>您平均每秒接住了 ';
     score_text += "<span style='color:red;'>" + (_gameScore * 1000 / deviation_time).toFixed(2);
-    score_text += "</span>" + ' 次哦！';
+    score_text += "</span>" + ' 个邓老师哦！';
     document.getElementById('GameScoreLayer-score').innerHTML = score_text;
     let bast = cookie('bast-score');
     if (!bast || _gameScore > bast) {
@@ -477,11 +477,11 @@ function backBtn() {
 function shareText(score) {
 
     deviation_time = (date2.getTime() - _date1.getTime())
-    if (score <= 2.5 * __Time) return '加油！我相信您可以的！';
-    if (score <= 5 * __Time) return '^_^ 加把劲，底力大王就是您！';
-    if (score <= 7.5 * __Time) return '您！';
-    if (score <= 10 * __Time) return '太 您 了！';
-    return '您是外星人嘛？';
+    if (score <= 2.5 * __Time) return '你让邓老师面上无光';
+    if (score <= 5 * __Time) return '邓老师讲的你又不听';
+    if (score <= 7.5 * __Time) return '这不就对了吗';
+    if (score <= 10 * __Time) return '和邓老师当年的网班学生一样';
+    return '你真是个神秘人';
 }
 
 function toStr(obj) {
